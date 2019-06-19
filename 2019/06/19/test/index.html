@@ -79,14 +79,17 @@
 
 
 
+<meta name="description" content="AjaxJSͨ���첽��ʽ����XML����  Ajax���̶���Ĵ����ͼ��ݴ��� ����һ��Ajax���� var xhr = new XMLHttpRequest(); ����IE6���£�ActiveXObject(‘Microsoft.XMLHTTP’)��   xhr.open(‘get’, ‘filename’, ture)�� open������ ���">
 <meta property="og:type" content="article">
 <meta property="og:title" content="test">
 <meta property="og:url" content="http://yoursite.com/2019/06/19/test/index.html">
 <meta property="og:site_name" content="hxy941025">
+<meta property="og:description" content="AjaxJSͨ���첽��ʽ����XML����  Ajax���̶���Ĵ����ͼ��ݴ��� ����һ��Ajax���� var xhr = new XMLHttpRequest(); ����IE6���£�ActiveXObject(‘Microsoft.XMLHTTP’)��   xhr.open(‘get’, ‘filename’, ture)�� open������ ���">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-19T11:50:46.331Z">
+<meta property="og:updated_time" content="2019-06-19T11:55:27.514Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="test">
+<meta name="twitter:description" content="AjaxJSͨ���첽��ʽ����XML����  Ajax���̶���Ĵ����ͼ��ݴ��� ����һ��Ajax���� var xhr = new XMLHttpRequest(); ����IE6���£�ActiveXObject(‘Microsoft.XMLHTTP’)��   xhr.open(‘get’, ‘filename’, ture)�� open������ ���">
 
 
 
@@ -296,7 +299,65 @@
       
 
       
-        
+        <h3 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h3><pre><code>JSͨ���첽��ʽ����XML����
+</code></pre><hr>
+<h4 id="Ajax���̶���J����ͼ��ݴ���"><a href="#Ajax���̶���J����ͼ��ݴ���" class="headerlink" title="Ajax���̶���Ĵ����ͼ��ݴ���"></a>Ajax���̶���Ĵ����ͼ��ݴ���</h4><ul>
+<li>����һ��Ajax����<ul>
+<li>var xhr = new XMLHttpRequest();</li>
+<li>����IE6���£�ActiveXObject(‘Microsoft.XMLHTTP’)��</li>
+</ul>
+</li>
+<li>xhr.open(‘get’, ‘filename’, ture)��<ul>
+<li>open������<ul>
+<li>����1���򿪷�ʽ��</li>
+<li>����2����ַ��</li>
+<li>����3���Ƿ��첽��<ul>
+<li>�첽������setTimeout��ǰ����벻��Ӱ���������ִ�У�</li>
+<li>ͬ������ǰ�����ûִ�����ʱ���������������ִ�У�</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>��<form>���������ݵ��ύ���ύ����name���Ե�input��ǩ��value��<ul>
+<li>action�������ύ�ĵ�ַ��defaultΪ��ǰҳ�棻</li>
+<li>method�������ύ�ķ�ʽ��defaultΪget��<ul>
+<li>get�����������ƺ�����ֵ��=���ӣ�����ж�����ݣ�����&amp;���Ӷ�����ݣ�����url��������ʾ������ͨ����ַ�����䣩��url���������ƣ��ʲ���ͨ��get����̫�����ݣ�</li>
+<li>post�����ݸ�ʽͬget������ͨ������ͷ���ݣ�post�����ϳ��������ƣ�</li>
+</ul>
+</li>
+<li>enctype���ύ�����ݸ�ʽ��defaultΪapplication/x-www-form-urlencoded��</li>
+</ul>
+</form></li>
+</ul>
+</li>
+<li>�ύ��������xhr.send();</li>
+<li>�ȵ��������������ݣ�<ul>
+<li>readyState��ajax����״̬��<ul>
+<li>0����ʼ������û����openʱ��״̬��</li>
+<li>1�����룬�Ѿ�send�����ڷ�������</li>
+<li>2��������ɣ�send������ɣ��Ѿ��յ�ȫ����Ӧ���ݣ�</li>
+<li>3�����������ڽ�����Ӧ���ݣ�</li>
+<li>4����ɣ���Ӧ���ݽ�����ɣ��Ѿ������ڿͻ��˵��ã�</li>
+</ul>
+</li>
+<li>responseText��ajax���󷵻ص����ݴ���ڴ������£� </li>
+<li>onreadystatechange����״̬�����ı�ʱ�������¼���</li>
+<li>status����������������Դ����״̬��http״̬�룻</li>
+</ul>
+</li>
+<li>get�������⣺<ul>
+<li>���棺����url���䣬����������ȷ��ʻ��棬�����޷�ˢ�³�����и��µ����ݣ����������ݺ�&amp;+�����/ʱ�����</li>
+<li>�������룺�����Ľ���encodeURI���룬encodeURI(‘����’)��</li>
+</ul>
+</li>
+<li>post�������⣺<ul>
+<li>���ݷ�send(‘xxx’)������д��䣬��Ҫ�ֶ��������ݸ�ʽֵ��xhr.setRequestHeader(‘content-type’,’application/x-www-form-urlencoded’ )��������ͷ��</li>
+<li>post�޻������⣻�������������⣻</li>
+</ul>
+</li>
+<li>���ݴ������ı������顢JSON�����ͣ�JSON��ʽҪ���ϸ���keyֵ������˫����</li>
+</ul>
+
       
     </div>
     
@@ -380,8 +441,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -423,6 +493,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ajax"><span class="nav-number">1.</span> <span class="nav-text">Ajax</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ajax���̶���J����ͼ��ݴ���"><span class="nav-number">1.1.</span> <span class="nav-text">Ajax���̶���Ĵ����ͼ��ݴ���</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
